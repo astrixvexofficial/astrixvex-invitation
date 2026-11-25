@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AstrixVex Gaming — Invitation Response</title>
+<style>
+:root{color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:radial-gradient(circle at 50% 0,#321016,#090b10 58%);font-family:Arial,sans-serif;color:#f5f5f5;display:grid;place-items:center;padding:22px}
+.card{width:min(100%,560px);background:#11151d;border:1px solid #73313a;border-radius:18px;overflow:hidden;box-shadow:0 18px 60px #0009}
+header{padding:24px;text-align:center;border-bottom:2px solid #e32636;background:#090b10}
+.brand{font-weight:900;letter-spacing:3px;color:#ff3545;font-size:22px}
+.sub{font-size:11px;letter-spacing:2px;color:#aeb5c0;margin-top:7px}
+main{padding:26px}
+.tag{color:#ff5967;font-size:11px;font-weight:bold;letter-spacing:2px}
+h1{font-size:26px;margin:10px 0}
+p{color:#cbd1da;line-height:1.65}
+.profile{background:#1b222d;border:1px solid #394352;border-radius:12px;padding:16px;margin:20px 0;line-height:1.9}
+.actions{display:flex;gap:12px;margin-top:22px}
+button{flex:1;padding:15px 12px;border:0;border-radius:8px;font-size:15px;font-weight:800;cursor:pointer}
+.accept{background:#e32636;color:white}.reject{background:#303946;color:#fff}
+#result{display:none;margin-top:18px;padding:15px;border-radius:9px;background:#202a23;border:1px solid #45664b;color:#c8f2d0;line-height:1.5}
+footer{padding:15px 22px;background:#090b10;color:#929ba8;font-size:11px;line-height:1.5}
+@media(max-width:420px){.actions{flex-direction:column}}
+</style>
+</head>
+<body>
+<section class="card">
+<header><div class="brand">ASTRIXVEX GAMING</div><div class="sub">ESPORTS DIVISION · INVITATION RESPONSE DEMO</div></header>
+<main>
+<div class="tag">PLAYER RECRUITMENT</div>
+<h1>Respond to your squad invitation</h1>
+<p>Hello <b>Moorthy N</b> — review the fictional recruitment invitation and choose your response below.</p>
+<div class="profile">
+<b>Player:</b> Moorthy N<br>
+<b>In-game name:</b> 浳īIGRÎS<br>
+<b>BGMI Player ID:</b> 55754046222<br>
+<b>Proposed role:</b> Main Assaulter / Entry Fragger<br>
+<b>Team:</b> AstrixVex Gaming (fictional)
+</div>
+<p>This is a fan-made demo page. Your choice is shown on this page only; no message is sent and no personal information is collected.</p>
+<div class="actions">
+<button class="accept" onclick="choose('accepted')">ACCEPT INVITATION</button>
+<button class="reject" onclick="choose('declined')">REJECT INVITATION</button>
+</div>
+<div id="result" role="status" aria-live="polite"></div>
+</main>
+<footer>FICTIONAL INTERACTIVE MOCKUP · Not affiliated with KRAFTON or BGMI. This demo does not register a player, confirm a roster place, or submit a tournament application.</footer>
+</section>
+<script>
+function choose(choice){
+ const box=document.getElementById('result');
+ box.style.display='block';
+ box.textContent=choice==='accepted'
+ ? 'Demo response recorded on this page: ACCEPTED. No real team registration or notification was sent.'
+ : 'Demo response recorded on this page: DECLINED. No real team notification was sent.';
+}
+</script>
+</body>
+</html>
